@@ -1,13 +1,13 @@
 // useFirestore.js
 import { useState, useEffect } from 'react';
 import { db } from './firebase';
-import { collection, query, orderBy, onSnapshot, addDoc } from 'firebase/firestore';
+import { collection, query, doc, onSnapshot, addDoc, deleteDoc, orderBy } from 'firebase/firestore';
 
 export const useFirestore = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const q = query(collection(db, 'items'));
+    const q = query(collection(db, 'items'),orderBy('date'));
     const unsubscribe = onSnapshot(q, (snap) => {
         const fetched = snap.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
       setItems(fetched);
@@ -22,7 +22,11 @@ export const useFirestore = () => {
             ...item,
             amount,
         })
+    };
+
+    const deleteItem = async (id)=>{
+      await deleteDoc(doc(db, 'items', id))
     }
 
-  return { items, addItem };
+  return { items, addItem, deleteItem };
 };
