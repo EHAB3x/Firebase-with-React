@@ -1,16 +1,15 @@
 import React from 'react'
 import "./ItemList.css"
 import {useFirestore} from '../../Firebase/useFirestore'
+import Item from '../item/Item';
 
 const ItemList = () => {
   const {items} = useFirestore();
   return (
     <div className='item-list'>
-      <ul>
         {items.map(item => {
-          return <li key={item.id}>{item.title} and {item.amount}</li>
+          return <Item item={item} key={item.id}/>
         })}
-      </ul>
     </div>
   )
 }
