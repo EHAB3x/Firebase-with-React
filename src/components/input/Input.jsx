@@ -55,7 +55,7 @@ const Input = () => {
             <input
               type="date"
               name="date"
-              placeholder='Date' 
+              data-placeholder='Date' 
               onChange={handleChange}  
               autoComplete="off"
               value={item.date}
