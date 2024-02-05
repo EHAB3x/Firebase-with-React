@@ -1,5 +1,43 @@
 .item-list {
-    margin: 0 auto;
-    margin-top: 3rem;
-    width: 70%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 70%;
+}
+.item-list table{
+  background-color: #f1f1f1;
+}
+.item-list table tbody tr.white{
+  background-color: white;
+}
+.item-list table thead tr td{
+  font-weight: bold;
+  text-align: center;
+}
+.item-list table tbody tr td{
+  text-align: center;
+  padding: 10px 0;
+}
+.item-list table tbody tr td.income{
+  color: green;
+}
+.item-list table tbody tr td.expense{
+  color: red;
+}
+.item-list table tbody tr td button{
+  cursor: pointer;
+  background-color: var(--alert);
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .item-list {
+    width: 90%;
   }
+}
