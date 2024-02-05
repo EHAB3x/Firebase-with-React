@@ -1,15 +1,17 @@
 .header{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 .header__title{
     letter-spacing: 2px;
+    margin-bottom: 2rem;
 }
 .header__balance{
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 400;
     padding: 0.7rem 2rem;
     background-color: var(--grey);
@@ -19,5 +21,4 @@
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
-    align-self: flex-start;
 }
