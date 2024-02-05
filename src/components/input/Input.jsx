@@ -62,7 +62,6 @@ const Input = () => {
               required
             />
 
-            <label htmlFor="type">Type</label>
             <select name="type" onChange={handleChange} ref={selectedOption}>
                 <option value="income">Income</option>
                 <option value="expense">Expense</option>
