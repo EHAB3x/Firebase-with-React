@@ -1,6 +1,8 @@
+import { useFirestore } from '../../Firebase/useFirestore'
 import './Header.css'
 import React from 'react'
 const Header = () => {
+  const {budget} = useFirestore();
   return (
     <div className='header'>
         <div className="header__title">
@@ -8,7 +10,7 @@ const Header = () => {
         </div>
 
         <div className="header__balance">
-            $0
+            ${budget}
         </div>
     </div>
   )

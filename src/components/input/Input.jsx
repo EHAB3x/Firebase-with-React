@@ -40,6 +40,7 @@ const Input = () => {
               onChange={handleChange} 
               autoComplete="off"
               value={item.title}
+              required
              />
 
             <input 
@@ -49,6 +50,7 @@ const Input = () => {
               onChange={handleAmount}  
               autoComplete="off"
               value={amount}
+              required
             />
             <input
               type="date"
@@ -57,6 +59,7 @@ const Input = () => {
               onChange={handleChange}  
               autoComplete="off"
               value={item.date}
+              required
             />
 
             <label htmlFor="type">Type</label>
